@@ -21,9 +21,9 @@ export class ChatFormComponent implements OnInit {
   responseArray: any[] = []; // Array for response
   isWoman: boolean;
   photoUser = 'assets/pics/dog.jpeg';
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   public updateResp(question: any, value: any): void {
     // /\S/ verify if the string has characters.
@@ -94,9 +94,9 @@ export class ChatFormComponent implements OnInit {
           this.photoUser = 'assets/pics/woman.png';
         }
         break;
-        case 'profession':
-        
-        break;
+      case 'profession':
+        return Professions.verifyProfession(value);
+
     }
     return null;
   }
