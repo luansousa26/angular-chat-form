@@ -3,6 +3,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { Questions } from './configuration/questions';
 import { Age } from './intelligence/age';
 import { Names } from './intelligence/name';
+import { Professions } from 'src/app/chat-form/intelligence/profession';
 @Component({
   selector: 'app-chat-form',
   templateUrl: './chat-form.component.html',
@@ -92,6 +93,9 @@ export class ChatFormComponent implements OnInit {
           this.isWoman = true;
           this.photoUser = 'assets/pics/woman.png';
         }
+        break;
+        case 'profession':
+        
         break;
     }
     return null;
