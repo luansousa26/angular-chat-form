@@ -1,13 +1,27 @@
-#phone{
-    background-image: url('../../assets/pics/phone.jpg');
-    background-repeat: no-repeat;
-    height: 600px;
+#phone {
+  background-image: url("../../assets/pics/phone.jpg");
+  background-repeat: no-repeat;
+  height: 600px;
 }
-#phone-screen{
-    background: #fbfbfb;
-    height: 399px;
-    width: 224px;
-    margin-left: 18px;
-    margin-top: -535px;
-    max-height: 400px;
+#phone-screen {
+  background: #fbfbfb;
+  height: 399px;
+  width: 224px;
+  margin-left: 18px;
+  margin-top: -535px;
+  max-height: 400px;
+}
+img {
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 50%;
+}
+.message-container{
+    display: inline;
+    float: left;
+}
+.message{
+    background: #54C3F8;
+    border-radius: 10%;
+    padding: 3px;
 }
