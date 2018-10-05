@@ -12,16 +12,29 @@
   max-height: 400px;
 }
 img {
+  width: 50px;
   max-width: 70px;
   max-height: 70px;
   border-radius: 50%;
 }
-.message-container{
-    display: inline;
-    float: left;
+.message-container {
+  display: inline;
+  float: left;
 }
-.message{
-    background: #54C3F8;
-    border-radius: 10%;
-    padding: 3px;
+.message {
+  color: white;
+  
+  border-radius: 4%;
+  padding: 4px;
+}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.robot{
+    background: #54c3f8;
+}
+.user {
+    background: #00D14A;
 }
