@@ -45,5 +45,9 @@ img {
   
 }
 .screen::-webkit-scrollbar-track-piece {
-  background: red;
+  background: rgb(194, 194, 194);
+}
+.screen::-webkit-scrollbar-thumb:vertical {
+  background:rgb(121, 121, 121);
+  height:9px;
 }
