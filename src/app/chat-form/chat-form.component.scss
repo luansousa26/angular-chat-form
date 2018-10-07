@@ -5,7 +5,7 @@
 }
 #phone-screen {
   background: #fbfbfb;
-  height: 350px;
+  height: 334px;
   width: 224px;
   margin-left: 18px;
   margin-top: -535px;
@@ -54,4 +54,10 @@ img {
 #keyboard{
     margin-left: 18px;
     width: 224px;
+}
+#keyboard-width{
+  width: 224px;
+}
+#textarea-reply{
+  resize: none;
 }
