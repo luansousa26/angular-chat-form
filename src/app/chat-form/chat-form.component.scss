@@ -10,6 +10,7 @@
   margin-left: 18px;
   margin-top: -535px;
   max-height: 400px;
+  overflow-y: auto;
 }
 img {
   width: 50px;
@@ -37,4 +38,12 @@ img {
 }
 .user {
     background: #00D14A;
+}
+.screen::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+  
+}
+.screen::-webkit-scrollbar-track-piece {
+  background: red;
 }
