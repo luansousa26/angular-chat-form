@@ -5,7 +5,7 @@
 }
 #phone-screen {
   background: #fbfbfb;
-  height: 399px;
+  height: 350px;
   width: 224px;
   margin-left: 18px;
   margin-top: -535px;
@@ -50,4 +50,8 @@ img {
 .screen::-webkit-scrollbar-thumb:vertical {
   background:rgb(121, 121, 121);
   height:9px;
+}
+#keyboard{
+    margin-left: 18px;
+    width: 224px;
 }
