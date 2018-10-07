@@ -6,7 +6,7 @@
       <!-- robot messages -->
       <div id="robot">
         <div class="row">
-          <div class="message-container">
+          <div matTooltip="User: Luan Sousa" class="message-container">
             <img src="assets/pics/luan.png">
           </div>
           <div class="message robot message-container">
@@ -16,13 +16,13 @@
       </div>
 
       <!-- user messages -->
-      <div style="float: right;" *ngIf="quiz.reply !== null" id="user">
+      <div *ngIf="quiz.reply !== null" class="user-div" id="user">
         <div class="row">
           <div class="message user message-container">
             <span> {{quiz.reply}}</span>
           </div>
-          <div class="message-container">
-            <img src="assets/pics/luan.png">
+          <div matTooltip="User: Panqueca" class="message-container">
+            <img src="assets/pics/dog.jpeg">
           </div>
         </div>
       </div>

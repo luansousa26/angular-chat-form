@@ -17,6 +17,7 @@ img {
   max-width: 70px;
   max-height: 70px;
   border-radius: 50%;
+  cursor: pointer;
 }
 .message-container {
   display: inline;
@@ -24,7 +25,7 @@ img {
 .message {
   color: white;
   cursor: pointer;
-  border-radius: 4%;
+  border-radius: .4em;
   padding: 4px;
   max-width: 172px;
   margin-top: 11px;
@@ -64,4 +65,7 @@ img {
 }
 #iterator{
   margin-bottom: 54px;
+}
+.user-div{
+  float: right;
 }
