@@ -2,26 +2,28 @@
   <div id="phone">
   </div>
   <div id="phone-screen" class="screen">
-    <!-- robot messages -->
-    <div id="robot">
-      <div class="row">
-        <div class="message-container">
-          <img src="assets/pics/luan.png">
-        </div>
-        <div class="message robot message-container">
-          <span> Hi whats your name?</span>
+    <div id="iterator" *ngFor="let quiz of quiz">
+      <!-- robot messages -->
+      <div id="robot">
+        <div class="row">
+          <div class="message-container">
+            <img src="assets/pics/luan.png">
+          </div>
+          <div class="message robot message-container">
+            <span>{{quiz.question}}</span>
+          </div>
         </div>
       </div>
-    </div>
-    <br/>
-    <!-- user messages -->
-    <div id="user">
-      <div class="row">
-        <div class="message user message-container">
-          <span> Hi, my name is Luan.</span>
-        </div>
-        <div class="message-container">
-          <img src="assets/pics/luan.png">
+
+      <!-- user messages -->
+      <div style="float: right;" *ngIf="quiz.reply !== null" id="user">
+        <div class="row">
+          <div class="message user message-container">
+            <span> {{quiz.reply}}</span>
+          </div>
+          <div class="message-container">
+            <img src="assets/pics/luan.png">
+          </div>
         </div>
       </div>
     </div>

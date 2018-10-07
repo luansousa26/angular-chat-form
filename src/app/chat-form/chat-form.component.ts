@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatFormComponent implements OnInit {
 
+  quiz: any[] = [
+    { id: 1, question: 'Hello, Whats your name?', type: 'text', reply: 'Hi my name is luan', comments: [] },
+    { id: 2, question: 'How many years do you have?', type: 'text', reply: '23 years', comments: [] }
+  ];
   constructor() { }
 
   ngOnInit() {

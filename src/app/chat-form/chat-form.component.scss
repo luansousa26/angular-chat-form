@@ -20,13 +20,14 @@ img {
 }
 .message-container {
   display: inline;
-  float: left;
 }
 .message {
   color: white;
   cursor: pointer;
   border-radius: 4%;
   padding: 4px;
+  max-width: 172px;
+  margin-top: 11px;
 }
 .row {
   margin-right: 0px;
@@ -60,4 +61,7 @@ img {
 }
 #textarea-reply{
   resize: none;
+}
+#iterator{
+  margin-bottom: 54px;
 }
