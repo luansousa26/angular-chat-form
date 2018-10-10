@@ -14,7 +14,9 @@ export class ChatFormComponent implements OnInit {
       question: "Hello, Whats your name?",
       type: "text",
       reply: null,
-      comments: []
+      comments: [
+        'Cool name guy!'
+      ]
     },
     {
       number: 1,
