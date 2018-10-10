@@ -5,7 +5,7 @@
 }
 #phone-screen {
   background: #fbfbfb;
-  height: 334px;
+  height:  312px;
   width: 224px;
   margin-left: 18px;
   margin-top: -535px;
@@ -71,4 +71,12 @@ img {
 }
 .input-reply{
   height: 35px;
+}
+
+#typing{
+  text-decoration: underline;
+  width: 221px;
+  margin-left: 20px;
+  background-color: #fbfbfb;
+  font-style: italic;
 }
