@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild, HostListener } from "@angular/core";
-
+import { Component, OnInit, HostListener } from "@angular/core";
 @Component({
   selector: "app-chat-form",
   templateUrl: "./chat-form.component.html",
