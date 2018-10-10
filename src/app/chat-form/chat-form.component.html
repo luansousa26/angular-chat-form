@@ -43,16 +43,18 @@
   <!-- form to each question -->
   <div id="keyboard">
     <div *ngFor="let ques of quiz">
-      <div *ngIf="ques.reply === null && ques.type === 'text'" id="string">
+      <div *ngIf="(ques.number === 0 || quiz[ques.number - 1].reply !== null) && (ques.type === 'text' && ques.reply === null)"
+        id="string">
         <mat-form-field id="keyboard-width">
           <textarea matInput (keyup.enter)="updateResp(ques,fieldText.value)" #fieldText name="text-area" id="textarea-reply"
             placeholder="Keyboard comments"></textarea>
         </mat-form-field>
       </div>
-      <div *ngIf="ques.reply === null && ques.type === 'number'" id="number">
+      <div *ngIf="(ques.number === 0 || quiz[ques.number - 1].reply !== null) && (ques.type === 'number' && ques.reply === null)"
+        id="number">
         <mat-form-field id="keyboard-width">
-          <input matInput (keyup.enter)="updateResp(ques,fieldNumber.value)" #fieldNumber name="text-number"
-            class="input-reply" id="number-reply" type="number" placeholder="Age">
+          <input matInput (keyup.enter)="updateResp(ques,fieldNumber.value)" #fieldNumber name="text-number" class="input-reply"
+            id="number-reply" type="number" placeholder="Age">
         </mat-form-field>
       </div>
     </div>
