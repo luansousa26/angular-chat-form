@@ -4,7 +4,7 @@
   <div id="phone-screen" class="screen">
     <div id="iterator" *ngFor="let message of quiz">
       <!-- robot messages -->
-      <div *ngIf="message.number === 0 || quiz[message.number - 1].reply !== null " id="robot">
+      <div *ngIf="message.number === 0 || quiz[message.number - 1].reply !== null" id="robot">
         <div class="row">
           <div matTooltip="User: Luan Sousa" class="message-container">
             <img src="assets/pics/luan.png">
@@ -42,8 +42,19 @@
   </div>
   <!-- form to each question -->
   <div id="keyboard">
-    <mat-form-field id="keyboard-width">
-      <textarea matInput id="textarea-reply" placeholder="Keyboard comments"></textarea>
-    </mat-form-field>
+    <div *ngFor="let ques of quiz">
+      <div *ngIf="ques.reply === null && ques.type === 'text'" id="string">
+        <mat-form-field id="keyboard-width">
+          <textarea matInput (keyup.enter)="updateResp(ques,fieldText.value)" #fieldText name="text-area" id="textarea-reply"
+            placeholder="Keyboard comments"></textarea>
+        </mat-form-field>
+      </div>
+      <div *ngIf="ques.reply === null && ques.type === 'number'" id="number">
+        <mat-form-field id="keyboard-width">
+          <input matInput (keyup.enter)="updateResp(ques,fieldNumber.value)" #fieldNumber name="text-number"
+            class="input-reply" id="number-reply" type="number" placeholder="Age">
+        </mat-form-field>
+      </div>
+    </div>
   </div>
 </div>

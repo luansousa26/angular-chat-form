@@ -7,6 +7,7 @@ import localePt from '@angular/common/locales/pt';
 registerLocaleData(localePt);
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import { registerLocaleData } from '@angular/common';
   imports: [
     BrowserModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-BR' }
