@@ -37,9 +37,11 @@ img {
 
 .robot{
     background: #54c3f8;
+    animation: slide-up 0.4s ease;
 }
 .user {
     background: #00D14A;
+    animation: slide-up 0.4s ease;
 }
 .screen::-webkit-scrollbar{
   width: 5px;
@@ -82,4 +84,15 @@ img {
 }
 #robot-reply{
   margin-top: 50px;
+}
+
+@keyframes slide-up {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
