@@ -50,10 +50,17 @@ export class ChatFormComponent implements OnInit {
     console.log(question);
     console.log(value);
     this.quiz[question.number].reply = value;
+    this.scrollDown();
   }
 
   @HostListener("document:keypress", ["$event"])
   public handleKeyboardEvent(): boolean {
     return true;
+  }
+
+  private scrollDown(): void {
+    setTimeout(() => {
+      document.getElementById("phone-screen").scrollTo(0,2000);
+    },500);
   }
 }

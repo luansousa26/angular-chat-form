@@ -4,7 +4,7 @@
   <div id="phone-screen" class="screen">
     <div id="iterator" *ngFor="let message of quiz">
       <!-- robot messages -->
-      <div *ngIf="message.number === 0 || quiz[message.number - 1].reply !== null" id="robot">
+      <div class="robot-class" *ngIf="message.number === 0 || quiz[message.number - 1].reply !== null" id="robot">
         <div class="row">
           <div matTooltip="User: Luan Sousa" class="message-container">
             <img src="assets/pics/luan.png">
