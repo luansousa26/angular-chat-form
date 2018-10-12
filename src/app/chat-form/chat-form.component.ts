@@ -1,8 +1,8 @@
-import { Component, OnInit, HostListener } from "@angular/core";
+import { Component, OnInit, HostListener } from '@angular/core';
 @Component({
-  selector: "app-chat-form",
-  templateUrl: "./chat-form.component.html",
-  styleUrls: ["./chat-form.component.scss"]
+  selector: 'app-chat-form',
+  templateUrl: './chat-form.component.html',
+  styleUrls: ['./chat-form.component.scss']
 })
 export class ChatFormComponent implements OnInit {
   field: any;
@@ -10,8 +10,8 @@ export class ChatFormComponent implements OnInit {
     {
       number: 0,
       id: 1,
-      question: "Hello, Whats your name?",
-      type: "text",
+      question: 'Hello, Whats your name?',
+      type: 'text',
       reply: null,
       comments: [
         'Cool name guy!'
@@ -20,24 +20,24 @@ export class ChatFormComponent implements OnInit {
     {
       number: 1,
       id: 2,
-      question: "How many years do you have?",
-      type: "number",
+      question: 'How many years do you have?',
+      type: 'number',
       reply: null,
       comments: []
     },
     {
       number: 2,
       id: 3,
-      question: "Where do you from?",
-      type: "text",
+      question: 'Where do you from?',
+      type: 'text',
       reply: null,
       comments: []
     },
     {
       number: 3,
       id: 4,
-      question: "Do you like a sanduiche?",
-      type: "text",
+      question: 'Do you like a sanduiche?',
+      type: 'text',
       reply: null,
       comments: []
     }
@@ -53,14 +53,14 @@ export class ChatFormComponent implements OnInit {
     this.scrollDown();
   }
 
-  @HostListener("document:keypress", ["$event"])
+  @HostListener('document:keypress', ['$event'])
   public handleKeyboardEvent(): boolean {
     return true;
   }
 
   private scrollDown(): void {
     setTimeout(() => {
-      document.getElementById("phone-screen").scrollTo(0,2000);
-    },300);
+      document.getElementById('phone-screen').scrollTo(0, 2000);
+    }, 300);
   }
 }
