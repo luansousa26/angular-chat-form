@@ -42,22 +42,30 @@ export class ChatFormComponent implements OnInit {
       comments: []
     }
   ];
+  typingTimer: any; // control the time that user don't type.
+  typingAlert = 'User is typing...'; // alert message.
+
   constructor() {}
 
   ngOnInit() {}
 
   updateResp(question: any, value: any): void {
-    console.log(question);
-    console.log(value);
     this.quiz[question.number].reply = value;
     this.scrollDown();
   }
 
-  @HostListener('document:keypress', ['$event'])
-  public handleKeyboardEvent(): boolean {
-    return true;
+  @HostListener('document:keydown', ['$event'])
+  public handleKeyboardEvent() {
+    clearTimeout(this.typingTimer);
+    this.typingAlert = 'User is typing...';
   }
-
+  @HostListener('document:keyup', ['$event'])
+  public handleKeyUp() {
+    clearTimeout(this.typingTimer);
+    this.typingTimer = setTimeout(() => {
+     this.typingAlert = '...';
+    }, 3000);
+  }
   private scrollDown(): void {
     setTimeout(() => {
       document.getElementById('phone-screen').scrollTo(0, 2000);
