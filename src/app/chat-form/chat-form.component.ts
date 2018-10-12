@@ -14,7 +14,7 @@ export class ChatFormComponent implements OnInit {
       type: 'text',
       reply: null,
       comments: [
-        'Cool name guy!'
+        'Cool name guy, do you like Luan Santana?'
       ]
     },
     {
@@ -28,7 +28,7 @@ export class ChatFormComponent implements OnInit {
     {
       number: 2,
       id: 3,
-      question: 'Where do you from?',
+      question: 'Where you from?',
       type: 'text',
       reply: null,
       comments: []
@@ -40,7 +40,27 @@ export class ChatFormComponent implements OnInit {
       type: 'text',
       reply: null,
       comments: []
-    }
+    },
+    {
+      number: 4,
+      id: 5,
+      question: 'What is your profession?',
+      type: 'text',
+      reply: null,
+      comments: [
+        'WOW, you must be a nerd!'
+      ]
+    },
+    {
+      number: 5,
+      id: 6,
+      question: 'What Programming Language do you prefer?',
+      type: 'text',
+      reply: null,
+      comments: [
+        'I preffer BIRL LANGUAGE rsrsrsrsrsrs!'
+      ]
+    },
   ];
   typingTimer: any; // control the time that user don't type.
   typingAlert = 'User is typing...'; // alert message.
