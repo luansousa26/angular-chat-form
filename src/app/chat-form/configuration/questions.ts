@@ -7,6 +7,7 @@ export class Questions {
             question: 'Hello, Whats your name?',
             type: 'text',
             reply: null,
+            formName: 'name',
             comments: 'Cool name guy, do you like Luan Santana?'
         },
         {
@@ -15,6 +16,7 @@ export class Questions {
             question: 'How many years do you have?',
             type: 'number',
             reply: null,
+            formName: 'age',
             comments: null
         },
         {
@@ -23,6 +25,7 @@ export class Questions {
             question: 'Where you from?',
             type: 'text',
             reply: null,
+            formName: 'country',
             comments: null
         },
         {
@@ -31,6 +34,7 @@ export class Questions {
             question: 'Do you like a sanduiche?',
             type: 'text',
             reply: null,
+            formName: 'sanduiche',
             comments: null
         },
         {
@@ -39,6 +43,7 @@ export class Questions {
             question: 'What is your profession?',
             type: 'text',
             reply: null,
+            formName: 'profession',
             comments: 'WOW, you must be a nerd!'
         },
         {
@@ -47,6 +52,7 @@ export class Questions {
             question: 'What Programming Language do you prefer?',
             type: 'text',
             reply: null,
+            formName: 'programmingLang',
             comments: 'I preffer BIRL LANGUAGE rsrsrsrsrsrs!'
         },
     ];
