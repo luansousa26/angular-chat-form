@@ -1,4 +1,4 @@
-# AngularChatForm
+# AngularChatForm :iphone:
 
 ## Form for get users informations
 
