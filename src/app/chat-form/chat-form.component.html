@@ -5,7 +5,7 @@
     <div id="iterator" *ngFor="let message of quiz">
       <!-- robot messages -->
       <div class="robot-class" *ngIf="message.number === 0 || quiz[message.number - 1].reply !== null" id="robot">
-        <br/><br/>
+        <br /><br />
         <div class="row">
           <div matTooltip="User: Luan Sousa" class="message-container">
             <img src="assets/pics/luan.png">
@@ -30,7 +30,7 @@
 
       <!-- robot reply messages -->
       <div *ngIf="message.reply !== null && message.comments.length > 0" id="robot-reply">
-        <br/>
+        <br />
         <div class="row">
           <div matTooltip="User: Luan Sousa" class="message-container">
             <img src="assets/pics/luan.png">
@@ -42,21 +42,25 @@
       </div>
     </div>
   </div>
+
+  <!-- div to alert user about typing -->
   <div id="typing"><small>{{typingAlert}}</small></div>
-  <!-- form to each question -->
+
+  <!-- field to each question -->
   <div id="keyboard">
     <div *ngFor="let ques of quiz">
       <div *ngIf="(ques.number === 0 || quiz[ques.number - 1].reply !== null) && (ques.type === 'text' && ques.reply === null)"
         id="string">
         <mat-form-field id="keyboard-width">
-          <textarea matInput (keyup.enter)="updateResp(ques,fieldText.value)" #fieldText name="text-area" id="textarea-reply" placeholder="Keyboard"></textarea>
+          <textarea matInput (keyup.enter)="updateResp(ques,fieldText.value)" #fieldText name="text-area" id="textarea-reply"
+            placeholder="Keyboard"></textarea>
         </mat-form-field>
       </div>
       <div *ngIf="(ques.number === 0 || quiz[ques.number - 1].reply !== null) && (ques.type === 'number' && ques.reply === null)"
         id="number">
         <mat-form-field id="keyboard-width">
-          <input matInput (keyup.enter)="updateResp(ques,fieldNumber.value)" #fieldNumber name="text-number" class="input-reply" id="number-reply"
-            type="number" placeholder="Age">
+          <input matInput (keyup.enter)="updateResp(ques,fieldNumber.value)" #fieldNumber name="text-number" class="input-reply"
+            id="number-reply" type="number" placeholder="Age">
         </mat-form-field>
       </div>
     </div>
