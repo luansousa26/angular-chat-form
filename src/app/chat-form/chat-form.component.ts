@@ -6,6 +6,12 @@ import { Questions } from './configuration/questions';
   styleUrls: ['./chat-form.component.scss']
 })
 export class ChatFormComponent implements OnInit {
+
+  /* ANGULAR CHAT FORM
+    My Idea for this project is create a cool and dinamic FORM
+    @Author: Luan Sousa
+  */
+
   field: any;
   quiz = Questions.questions; // All questions
   typingTimer: any; // control the time that user don't type.
