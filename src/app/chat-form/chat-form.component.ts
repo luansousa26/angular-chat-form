@@ -53,4 +53,9 @@ export class ChatFormComponent implements OnInit {
       document.getElementById('phone-screen').scrollTo(0, 2000);
     }, 300);
   }
+
+  // get form data
+  public onSubmit(): void {
+    console.log(this.quiz);
+  }
 }
