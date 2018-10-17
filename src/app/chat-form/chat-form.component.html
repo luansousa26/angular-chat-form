@@ -29,7 +29,7 @@
       </div>
 
       <!-- robot reply messages -->
-      <div *ngIf="message.reply !== null && message.comments.length > 0" id="robot-reply">
+      <div *ngIf="message.reply !== null && message.comments !== null" id="robot-reply">
         <br />
         <div class="row">
           <div matTooltip="User: Luan Sousa" class="message-container">
