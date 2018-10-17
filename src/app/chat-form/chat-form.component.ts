@@ -7,7 +7,7 @@ import { Questions } from './configuration/questions';
 })
 export class ChatFormComponent implements OnInit {
   field: any;
-  quiz  = Questions.questions; // All questions
+  quiz = Questions.questions; // All questions
   typingTimer: any; // control the time that user don't type.
   typingAlert = 'User is typing...'; // alert message.
 
@@ -16,8 +16,10 @@ export class ChatFormComponent implements OnInit {
   ngOnInit() { }
 
   updateResp(question: any, value: any): void {
-    this.quiz[question.number].reply = value;
-    this.scrollDown();
+    if (/\S/.test(value)) {
+      this.quiz[question.number].reply = value;
+      this.scrollDown();
+    }
   }
 
   // Listen when the user press a key.
