@@ -13,9 +13,7 @@ export class ChatFormComponent implements OnInit {
       question: 'Hello, Whats your name?',
       type: 'text',
       reply: null,
-      comments: [
-        'Cool name guy, do you like Luan Santana?'
-      ]
+      comments: 'Cool name guy, do you like Luan Santana?'
     },
     {
       number: 1,
@@ -23,7 +21,7 @@ export class ChatFormComponent implements OnInit {
       question: 'How many years do you have?',
       type: 'number',
       reply: null,
-      comments: []
+      comments: null
     },
     {
       number: 2,
@@ -31,7 +29,7 @@ export class ChatFormComponent implements OnInit {
       question: 'Where you from?',
       type: 'text',
       reply: null,
-      comments: []
+      comments: null
     },
     {
       number: 3,
@@ -39,7 +37,7 @@ export class ChatFormComponent implements OnInit {
       question: 'Do you like a sanduiche?',
       type: 'text',
       reply: null,
-      comments: []
+      comments: null
     },
     {
       number: 4,
@@ -47,9 +45,7 @@ export class ChatFormComponent implements OnInit {
       question: 'What is your profession?',
       type: 'text',
       reply: null,
-      comments: [
-        'WOW, you must be a nerd!'
-      ]
+      comments: 'WOW, you must be a nerd!'
     },
     {
       number: 5,
@@ -57,35 +53,40 @@ export class ChatFormComponent implements OnInit {
       question: 'What Programming Language do you prefer?',
       type: 'text',
       reply: null,
-      comments: [
-        'I preffer BIRL LANGUAGE rsrsrsrsrsrs!'
-      ]
+      comments: 'I preffer BIRL LANGUAGE rsrsrsrsrsrs!'
     },
   ];
   typingTimer: any; // control the time that user don't type.
   typingAlert = 'User is typing...'; // alert message.
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   updateResp(question: any, value: any): void {
     this.quiz[question.number].reply = value;
     this.scrollDown();
   }
 
+  // Listen when the user press a key.
+
   @HostListener('document:keydown', ['$event'])
   public handleKeyboardEvent() {
     clearTimeout(this.typingTimer);
     this.typingAlert = 'User is typing...';
   }
+
+  // Listen when the user press out a key.
+
   @HostListener('document:keyup', ['$event'])
   public handleKeyUp() {
     clearTimeout(this.typingTimer);
     this.typingTimer = setTimeout(() => {
-     this.typingAlert = '...';
+      this.typingAlert = '...';
     }, 3000);
   }
+
+  // Scroll down before a anwser.
   private scrollDown(): void {
     setTimeout(() => {
       document.getElementById('phone-screen').scrollTo(0, 2000);
