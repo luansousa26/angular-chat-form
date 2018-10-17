@@ -65,4 +65,7 @@ export class ChatFormComponent implements OnInit {
     });
     return tmpArr;
   }
+  public undoForm(): void {
+      location.reload();
+  }
 }

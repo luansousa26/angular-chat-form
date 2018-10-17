@@ -72,6 +72,7 @@
     <!-- Submit form -->
     <div *ngIf="quiz[quiz.length -1].reply !== null">
         <button mat-flat-button id="btn-submit" (click)="onSubmit()">Send!</button>
+        <button mat-flat-button id="btn-undo" (click)="undoForm()">Undo!</button>
       </div>
   </div>
 </div>
