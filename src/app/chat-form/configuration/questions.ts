@@ -55,5 +55,14 @@ export class Questions {
             formName: 'programmingLang',
             comments: 'I preffer BIRL LANGUAGE rsrsrsrsrsrs!'
         },
+        {
+            number: 6,
+            id: 7,
+            question: 'You watch Game Of Thrones?',
+            type: 'text',
+            reply: null,
+            formName: 'wathGame',
+            comments: 'I love Sansa Stark!'
+        },
     ];
 }
