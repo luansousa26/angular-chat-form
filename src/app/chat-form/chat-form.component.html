@@ -75,4 +75,7 @@
         <button mat-flat-button id="btn-undo" (click)="undoForm()">Undo!</button>
       </div>
   </div>
+  <div id="response-array" *ngIf="responseArray.length > 0">
+    <span>{{responseArray | json}} </span>
+  </div>
 </div>
