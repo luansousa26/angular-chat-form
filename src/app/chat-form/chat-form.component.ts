@@ -15,7 +15,7 @@ export class ChatFormComponent implements OnInit {
   quiz = Questions.questions; // All questions
   typingTimer: any; // control the time that user don't type.
   typingAlert = "User is typing..."; // alert message.
-
+  responseArray: any[] = [];
   constructor() {}
 
   ngOnInit() {}
@@ -59,11 +59,10 @@ export class ChatFormComponent implements OnInit {
   }
 
   private questionsAndAnswers(): any {
-    const tmpArr = [];
+    this.responseArray = [];
     this.quiz.map(qz => {
-      tmpArr.push({[qz.formName]: qz.reply });
+      this.responseArray.push({[qz.formName]: qz.reply });
     });
-    return tmpArr;
   }
   public undoForm(): void {
       location.reload();
