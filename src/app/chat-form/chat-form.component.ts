@@ -1,12 +1,12 @@
-import { Component, OnInit, HostListener } from "@angular/core";
-import { Questions } from "./configuration/questions";
+import { Component, OnInit, HostListener } from '@angular/core';
+import { Questions } from './configuration/questions';
 @Component({
-  selector: "app-chat-form",
-  templateUrl: "./chat-form.component.html",
-  styleUrls: ["./chat-form.component.scss"]
+  selector: 'app-chat-form',
+  templateUrl: './chat-form.component.html',
+  styleUrls: ['./chat-form.component.scss']
 })
 export class ChatFormComponent implements OnInit {
-  
+
   /* ANGULAR CHAT FORM
     My Idea for this project is create a cool and dinamic FORM
     @Author: Luan Sousa
@@ -15,8 +15,8 @@ export class ChatFormComponent implements OnInit {
   field: any;
   quiz = Questions.questions; // All questions
   typingTimer: any; // control the time that user don't type.
-  typingAlert = "User is typing..."; // alert message.
-  responseArray: any[] = [];
+  typingAlert = 'User is typing...'; // alert message.
+  responseArray: any[] = []; // Array for response
   constructor() {}
 
   ngOnInit() {}
@@ -31,26 +31,26 @@ export class ChatFormComponent implements OnInit {
 
   // Listen when the user press a key.
 
-  @HostListener("document:keydown", ["$event"])
+  @HostListener('document:keydown', ['$event'])
   public handleKeyboardEvent() {
     clearTimeout(this.typingTimer);
-    this.typingAlert = "User is typing...";
+    this.typingAlert = 'User is typing...';
   }
 
   // Listen when the user press out a key.
 
-  @HostListener("document:keyup", ["$event"])
+  @HostListener('document:keyup', ['$event'])
   public handleKeyUp() {
     clearTimeout(this.typingTimer);
     this.typingTimer = setTimeout(() => {
-      this.typingAlert = "...";
+      this.typingAlert = '...';
     }, 3000);
   }
 
   // Scroll down before a anwser.
   private scrollDown(): void {
     setTimeout(() => {
-      document.getElementById("phone-screen").scrollTo(0, 2000);
+      document.getElementById('phone-screen').scrollTo(0, 2000);
     }, 300);
   }
 
