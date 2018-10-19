@@ -59,7 +59,8 @@ export class ChatFormComponent implements OnInit {
     console.log(this.questionsAndAnswers());
   }
 
-  private questionsAndAnswers(): any {
+  // create a response array 
+  private questionsAndAnswers(): void {
     this.responseArray = [];
     this.quiz.map(qz => {
       this.responseArray.push({[qz.formName]: qz.reply });
