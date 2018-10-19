@@ -21,7 +21,7 @@ export class ChatFormComponent implements OnInit {
 
   ngOnInit() {}
 
-  updateResp(question: any, value: any): void {
+ public updateResp(question: any, value: any): void {
     // /\S/ verify if the string has characters.
     if (/\S/.test(value)) {
       this.quiz[question.number].reply = value;
