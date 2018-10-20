@@ -44,6 +44,7 @@ img {
 .user {
     background: #00D14A;
     animation: slide-up 1.4s ease;
+    word-break: break-all;
 }
 .screen::-webkit-scrollbar{
   width: 5px;
@@ -69,9 +70,7 @@ img {
 #iterator{
   margin-bottom: 2px;
 }
-.user-div{
-  float: right;
-}
+
 .input-reply{
   height: 35px;
 }

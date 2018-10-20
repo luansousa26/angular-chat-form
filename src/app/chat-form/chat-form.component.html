@@ -5,7 +5,6 @@
     <div id="iterator" *ngFor="let message of quiz">
       <!-- robot messages -->
       <div class="robot-class" *ngIf="message.number === 0 || quiz[message.number - 1].reply !== null" id="robot">
-        <br /><br />
         <div class="row">
           <div matTooltip="User: Luan Sousa" class="message-container">
             <img src="assets/pics/luan.png">
@@ -17,7 +16,7 @@
       </div>
 
       <!-- user messages -->
-      <div *ngIf="message.reply !== null" class="user-div" id="user">
+      <div *ngIf="message.reply !== null" align="right" class="user-div" id="user">
         <div class="row">
           <div class="message user message-container">
             <span> {{message.reply}}</span>
@@ -30,7 +29,6 @@
 
       <!-- robot reply messages -->
       <div *ngIf="message.reply !== null && message.comments !== null" id="robot-reply">
-        <br />
         <div class="row">
           <div matTooltip="User: Luan Sousa" class="message-container">
             <img src="assets/pics/luan.png">
