@@ -45,7 +45,7 @@ export class ChatFormComponent implements OnInit {
     }, 3000);
   }
 
-  // Scroll down before a anwser.
+  // Scroll down after a anwser.
   private scrollDown(): void {
     setTimeout(() => {
       document.getElementById('phone-screen').scrollTo(0, 2000);
