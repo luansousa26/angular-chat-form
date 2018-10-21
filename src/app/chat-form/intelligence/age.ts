@@ -20,6 +20,14 @@ export class Age {
             ages: [21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
             message: 'Its time for choose some job area. Do you have someone? I will alert you, be a robot is no good.'
         },
+        {
+            ages: [31, 32, 33, 43, 35, 36, 37, 38, 39, 40],
+            message: 'Do you have kids? I hope yes.'
+        },
+        {
+            ages: [41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
+            message: 'You must be so wise, if do you have a time, i would like to learn with you!'
+        },
     ];
 
     public static verifyAge(age: number): string {
