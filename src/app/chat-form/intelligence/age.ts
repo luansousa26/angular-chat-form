@@ -28,6 +28,14 @@ export class Age {
             ages: [41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
             message: 'You must be so wise, if do you have a time, i would like to learn with you!'
         },
+        {
+            ages: [61, 62, 63, 64, 65, 66, 67, 68, 69, 70],
+            message: 'You must be SUPER wise, do you have a beard like Gandalf?'
+        },
+        {
+            ages: [71, 72, 73, 74, 75, 76, 77, 78, 79, 80],
+            message: 'You must be SUPER HIPER MAGUM wise, do you have a beard like Albus Dumbledore?'
+        },
     ];
 
     public static verifyAge(age: number): string {
