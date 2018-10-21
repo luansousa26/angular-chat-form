@@ -4,8 +4,14 @@ export class Countries {
         { name: 'paraguay', message: 'Paraguay is a good place to buy things :D.' },
         { name: 'argentina', message: 'Quiero conocer argentina Buenos Aires.' },
         { name: 'colombia', message: 'Colombia its a good place. Some day i will meet Bogotá!' },
-        { name: 'japan', message: 'I LOVE JAPAN, the culture and mangas \0/. mo shindeiru naniiii' },
+        { name: 'japan', message: 'I LOVE JAPAN, the culture and mangas. mo shindeiru.. naniiii?' },
         { name: 'china', message: 'Some day i will live in China and learn Shaolin Kung-fu!' },
+        { name: 'north korea', message: 'Pyongyang seems be beautiful.' },
+        { name: 'south korea', message: 'I would like learn k-pop.' },
+        { name: 'spain', message: 'PLUSSSSSSSS ULTRAAAAAAAA!!' },
+        { name: 'united kingdom', message: 'Londres its so perfect, a kingdom sounds good.' },
+        { name: 'narnia', message: 'WOW ASLAN!!' },
+        { name: 'winterfell', message: 'The lone wolf dies but the pack survives!' },
     ];
 
     public static verifyCountries(country: string): string {
