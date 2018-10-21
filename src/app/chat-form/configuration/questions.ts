@@ -12,7 +12,8 @@ export class Questions {
       type: 'text',
       reply: null,
       formName: 'name',
-      comments: 'Cool name guy, do you like Luan Santana?'
+      comments: 'Cool name guy, do you like Luan Santana?',
+      response: 'name',
     },
     {
       number: 1,
@@ -21,7 +22,8 @@ export class Questions {
       type: 'number',
       reply: null,
       formName: 'age',
-      comments: null
+      comments: null,
+      response: 'years',
     },
     {
       number: 2,
@@ -30,7 +32,8 @@ export class Questions {
       type: 'text',
       reply: null,
       formName: 'country',
-      comments: null
+      comments: null,
+      response: 'country',
     },
     {
       number: 3,
@@ -39,7 +42,8 @@ export class Questions {
       type: 'text',
       reply: null,
       formName: 'sanduiche',
-      comments: null
+      comments: null,
+      response: null,
     },
     {
       number: 4,
@@ -48,7 +52,8 @@ export class Questions {
       type: 'text',
       reply: null,
       formName: 'profession',
-      comments: 'WOW, you must be a nerd!'
+      comments: 'WOW, you must be a nerd!',
+      response: null,
     },
     {
       number: 5,
@@ -57,7 +62,8 @@ export class Questions {
       type: 'text',
       reply: null,
       formName: 'programmingLang',
-      comments: 'I preffer BIRL LANGUAGE rsrsrsrsrsrs!'
+      comments: 'I preffer BIRL LANGUAGE rsrsrsrsrsrs!',
+      response: null,
     },
     {
       number: 6,
@@ -66,7 +72,8 @@ export class Questions {
       type: 'text',
       reply: null,
       formName: 'wathGame',
-      comments: 'I love Sansa Stark!'
+      comments: 'I love Sansa Stark!',
+      response: null,
     }
   ];
 }
