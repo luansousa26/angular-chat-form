@@ -6,7 +6,7 @@ export class Age {
         },
         {
             ages: [5, 6, 7, 8, 9],
-            message: 'You are so young, i hope you like cartoons :D'
+            message: 'You are so young, i hope you like cartoons :D. I love Samurai Jack!'
         }
     ];
 
