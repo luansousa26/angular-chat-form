@@ -24,7 +24,8 @@ export class ChatFormComponent implements OnInit {
     // /\S/ verify if the string has characters.
     if (/\S/.test(value)) {
       this.quiz[question.number].reply = value;
-      this.quiz[question.number].comments = this.verifyResponse(this.quiz[question.number].response, value);
+      this.quiz[question.number].comments = this.verifyResponse(this.quiz[question.number].response, value) ?
+        this.verifyResponse(this.quiz[question.number].response, value) : this.quiz[question.number].comments;
       this.scrollDown();
     }
   }
