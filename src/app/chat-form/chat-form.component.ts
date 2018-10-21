@@ -1,3 +1,4 @@
+import { Countries } from './intelligence/countries';
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Questions } from './configuration/questions';
 import { Age } from './intelligence/age';
@@ -26,7 +27,7 @@ export class ChatFormComponent implements OnInit {
       this.quiz[question.number].reply = value;
       // Ternary  for verify if the verifyResponse return null
       this.quiz[question.number].comments = this.verifyResponse(this.quiz[question.number].response, value) ?
-      this.verifyResponse(this.quiz[question.number].response, value) : this.quiz[question.number].comments;
+        this.verifyResponse(this.quiz[question.number].response, value) : this.quiz[question.number].comments;
       this.scrollDown();
     }
   }
@@ -75,6 +76,8 @@ export class ChatFormComponent implements OnInit {
     switch (response) {
       case 'age':
         return Age.verifyAge(Number.parseInt(value));
+      case 'country':
+        return Countries.verifyCountries(value);
     }
     return null;
   }
