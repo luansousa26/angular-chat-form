@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Questions } from './configuration/questions';
+import { Age } from './intelligence/age';
 @Component({
   selector: 'app-chat-form',
   templateUrl: './chat-form.component.html',
@@ -15,14 +16,15 @@ export class ChatFormComponent implements OnInit {
   typingTimer: any; // control the time that user don't type.
   typingAlert = 'User is typing...'; // alert message.
   responseArray: any[] = []; // Array for response
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
- public updateResp(question: any, value: any): void {
+  public updateResp(question: any, value: any): void {
     // /\S/ verify if the string has characters.
     if (/\S/.test(value)) {
       this.quiz[question.number].reply = value;
+      this.quiz[question.number].comments = this.verifyResponse(this.quiz[question.number].response, value);
       this.scrollDown();
     }
   }
@@ -61,10 +63,17 @@ export class ChatFormComponent implements OnInit {
   private questionsAndAnswers(): void {
     this.responseArray = [];
     this.quiz.map(qz => {
-      this.responseArray.push({[qz.formName]: qz.reply });
+      this.responseArray.push({ [qz.formName]: qz.reply });
     });
   }
   public undoForm(): void {
-      location.reload();
+    location.reload();
+  }
+  public verifyResponse(response: string, value: any): string {
+    switch (response) {
+      case 'age':
+        return Age.verifyAge(Number.parseInt(value));
+    }
+    return null;
   }
 }

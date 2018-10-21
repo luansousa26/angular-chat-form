@@ -1,5 +1,5 @@
 export class Age {
-    age = [
+    private static agesArray = [
         {
             ages: [0, 1, 2, 3, 4],
             message: 'You really exist? rsrsrs. Or are you a Genius?'
@@ -9,4 +9,10 @@ export class Age {
             message: 'You are so young, i hope you like cartoons :D'
         }
     ];
+
+    public static verifyAge(age: number): string {
+        /* Verify if the ages contains 'age' and return to comment */
+        return this.agesArray.find(agesFind => agesFind.ages.includes(age))
+            ? this.agesArray.find(agesFind => agesFind.ages.includes(age)).message : null;
+    }
 }

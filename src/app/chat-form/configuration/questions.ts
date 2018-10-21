@@ -23,7 +23,7 @@ export class Questions {
       reply: null,
       formName: 'age',
       comments: null,
-      response: 'years',
+      response: 'age',
     },
     {
       number: 2,
