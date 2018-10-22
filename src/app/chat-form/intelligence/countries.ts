@@ -1,4 +1,4 @@
-import { NameEqualityVerification } from "./name-equality-verification";
+import { EqualityVerification } from "./name-equality-verification";
 
 export class Countries {
   public static countries = [
@@ -33,6 +33,6 @@ export class Countries {
   ];
 
   public static verifyCountries(country: string): string {
-    return NameEqualityVerification.verifyNameEquality(this.countries, country);
+    return EqualityVerification.verifyNameEquality(this.countries, country);
   }
 }
