@@ -2,7 +2,8 @@ export class Age {
     private static agesArray = [
         {
             ages: [0, 1, 2, 3, 4],
-            message: 'You really exist? rsrsrs. Or are you a Genius?. Like Sheldon Cooper!'
+            message: 'You really exist? rsrsrs. Or are you a Genius?. Like Sheldon Cooper!',
+            function: 'inRange'
         },
         {
             ages: [5, 6, 7, 8, 9],
@@ -25,7 +26,7 @@ export class Age {
             message: 'Do you have kids? I hope yes.'
         },
         {
-            ages: [41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
+            ages: [41, 42, 43, 44, 45, 46, 47, 48, 49, 60],
             message: 'You must be so wise, if do you have a time, i would like to learn with you!'
         },
         {
@@ -45,7 +46,6 @@ export class Age {
             message: 'You are in 100 level!'
         },
     ];
-
     public static verifyAge(age: number): string {
         /*
         Verify if the ages contains 'age' and return to comment the message in array

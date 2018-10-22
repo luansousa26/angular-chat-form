@@ -1,6 +1,6 @@
 import { EqualityVerification } from "./name-equality-verification";
 
-export class Name {
+export class Names {
   public static names = [
     { name: "luan", message: "Cool name guy, do you like Luan Santana?" },
     { name: "eric", message: "Wow your name can mean the  lonely king." },
@@ -25,13 +25,17 @@ export class Name {
       message: "wow your name can mean the mysterious."
     },
     {
-        name: "jessica",
-        message: "wow your name can mean the observer."
-      },
-      {
-        name: "lucas",
-        message: "wow your name can mean the brighter."
-      },
+      name: "jessica",
+      message: "wow your name can mean the observer."
+    },
+    {
+      name: "lucas",
+      message: "wow your name can mean the brighter."
+    },
+    {
+      name: "dion",
+      message: "wow your name its like Jhon Lenon, are you a fake??? kkkk."
+    }
   ];
 
   public static verifyName(value: string): string {

@@ -1,59 +1,64 @@
-import { Countries } from './intelligence/countries';
-import { Component, OnInit, HostListener } from '@angular/core';
-import { Questions } from './configuration/questions';
-import { Age } from './intelligence/age';
+import { Countries } from "./intelligence/countries";
+import { Component, OnInit, HostListener } from "@angular/core";
+import { Questions } from "./configuration/questions";
+import { Age } from "./intelligence/age";
+import { Names } from "./intelligence/name";
 @Component({
-  selector: 'app-chat-form',
-  templateUrl: './chat-form.component.html',
-  styleUrls: ['./chat-form.component.scss']
+  selector: "app-chat-form",
+  templateUrl: "./chat-form.component.html",
+  styleUrls: ["./chat-form.component.scss"]
 })
 export class ChatFormComponent implements OnInit {
-
-  /* ANGULAR CHAT FORM
+  /* 
+  ANGULAR CHAT FORM
     My Idea for this project is create a cool and dinamic FORM
     @Author: Luan Sousa
   */
   quiz = Questions.questions; // All questions
   typingTimer: any; // control the time that user don't type.
-  typingAlert = 'User is typing...'; // alert message.
+  typingAlert = "User is typing..."; // alert message.
   responseArray: any[] = []; // Array for response
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   public updateResp(question: any, value: any): void {
     // /\S/ verify if the string has characters.
     if (/\S/.test(value)) {
       this.quiz[question.number].reply = value;
       // Ternary  for verify if the verifyResponse return null
-      this.quiz[question.number].comments = this.verifyResponse(this.quiz[question.number].response, value) ?
-        this.verifyResponse(this.quiz[question.number].response, value) : this.quiz[question.number].comments;
+      this.quiz[question.number].comments = this.verifyResponse(
+        this.quiz[question.number].response,
+        value
+      )
+        ? this.verifyResponse(this.quiz[question.number].response, value)
+        : this.quiz[question.number].comments;
       this.scrollDown();
     }
   }
 
   // Listen when the user press a key.
 
-  @HostListener('document:keydown', ['$event'])
+  @HostListener("document:keydown", ["$event"])
   public handleKeyboardEvent() {
     clearTimeout(this.typingTimer);
-    this.typingAlert = 'User is typing...';
+    this.typingAlert = "User is typing...";
   }
 
   // Listen when the user press out a key.
 
-  @HostListener('document:keyup', ['$event'])
+  @HostListener("document:keyup", ["$event"])
   public handleKeyUp() {
     clearTimeout(this.typingTimer);
     this.typingTimer = setTimeout(() => {
-      this.typingAlert = '...';
+      this.typingAlert = "...";
     }, 3000);
   }
 
   // Scroll down after a anwser.
   private scrollDown(): void {
     setTimeout(() => {
-      document.getElementById('phone-screen').scrollTo(0, 2000);
+      document.getElementById("phone-screen").scrollTo(0, 2000);
     }, 300);
   }
 
@@ -74,10 +79,12 @@ export class ChatFormComponent implements OnInit {
   }
   public verifyResponse(response: string, value: any): string {
     switch (response) {
-      case 'age':
+      case "age":
         return Age.verifyAge(Number.parseInt(value));
-      case 'country':
+      case "country":
         return Countries.verifyCountries(value);
+        case "name":
+        return Names.verifyName(value);
     }
     return null;
   }
