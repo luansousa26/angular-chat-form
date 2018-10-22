@@ -12,6 +12,7 @@ export class Countries {
         { name: 'united kingdom', message: 'Londres its so perfect, a kingdom sounds good.' },
         { name: 'narnia', message: 'WOW ASLAN!!' },
         { name: 'winterfell', message: 'The lone wolf dies but the pack survives!' },
+        { name: 'konoha', message: 'Jiraya for Hokage!' },
     ];
 
     public static verifyCountries(country: string): string {
