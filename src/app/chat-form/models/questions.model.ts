@@ -6,4 +6,5 @@ export class Question {
   reply?: string;
   formName?: string;
   comments?: string;
+  response?: string;
 }

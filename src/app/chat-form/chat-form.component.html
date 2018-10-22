@@ -1,11 +1,11 @@
 <div align="center" id="chat-container">
+ <!-- Iphone Image -->
   <div id="phone">
   </div>
   <div id="phone-screen" class="screen">
     <div id="iterator" *ngFor="let message of quiz">
       <!-- robot messages -->
       <div class="robot-class" *ngIf="message.number === 0 || quiz[message.number - 1].reply !== null" id="robot">
-        <br /><br />
         <div class="row">
           <div matTooltip="User: Luan Sousa" class="message-container">
             <img src="assets/pics/luan.png">
@@ -17,8 +17,8 @@
       </div>
 
       <!-- user messages -->
-      <div *ngIf="message.reply !== null" class="user-div" id="user">
-        <div class="row">
+      <div *ngIf="message.reply !== null" align="right" class="user-div" id="user">
+        <div id="div-mess">
           <div class="message user message-container">
             <span> {{message.reply}}</span>
           </div>
@@ -30,7 +30,6 @@
 
       <!-- robot reply messages -->
       <div *ngIf="message.reply !== null && message.comments !== null" id="robot-reply">
-        <br />
         <div class="row">
           <div matTooltip="User: Luan Sousa" class="message-container">
             <img src="assets/pics/luan.png">

@@ -1,5 +1,7 @@
+import { Countries } from './intelligence/countries';
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Questions } from './configuration/questions';
+import { Age } from './intelligence/age';
 @Component({
   selector: 'app-chat-form',
   templateUrl: './chat-form.component.html',
@@ -15,14 +17,17 @@ export class ChatFormComponent implements OnInit {
   typingTimer: any; // control the time that user don't type.
   typingAlert = 'User is typing...'; // alert message.
   responseArray: any[] = []; // Array for response
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
- public updateResp(question: any, value: any): void {
+  public updateResp(question: any, value: any): void {
     // /\S/ verify if the string has characters.
     if (/\S/.test(value)) {
       this.quiz[question.number].reply = value;
+      // Ternary  for verify if the verifyResponse return null
+      this.quiz[question.number].comments = this.verifyResponse(this.quiz[question.number].response, value) ?
+        this.verifyResponse(this.quiz[question.number].response, value) : this.quiz[question.number].comments;
       this.scrollDown();
     }
   }
@@ -45,7 +50,7 @@ export class ChatFormComponent implements OnInit {
     }, 3000);
   }
 
-  // Scroll down before a anwser.
+  // Scroll down after a anwser.
   private scrollDown(): void {
     setTimeout(() => {
       document.getElementById('phone-screen').scrollTo(0, 2000);
@@ -57,14 +62,23 @@ export class ChatFormComponent implements OnInit {
     console.log(this.questionsAndAnswers());
   }
 
-  // create a response array 
+  // create a response array
   private questionsAndAnswers(): void {
     this.responseArray = [];
     this.quiz.map(qz => {
-      this.responseArray.push({[qz.formName]: qz.reply });
+      this.responseArray.push({ [qz.formName]: qz.reply });
     });
   }
   public undoForm(): void {
-      location.reload();
+    location.reload();
+  }
+  public verifyResponse(response: string, value: any): string {
+    switch (response) {
+      case 'age':
+        return Age.verifyAge(Number.parseInt(value));
+      case 'country':
+        return Countries.verifyCountries(value);
+    }
+    return null;
   }
 }
