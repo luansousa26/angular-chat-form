@@ -7,7 +7,7 @@
 }
 #phone-screen {
   background: #fbfbfb;
-  height:  312px;
+  height: 312px;
   width: 224px;
   margin-left: -4px;
   margin-top: -535px;
@@ -27,7 +27,7 @@ img {
 .message {
   color: white;
   cursor: pointer;
-  border-radius: .4em;
+  border-radius: 0.4em;
   padding: 4px;
   max-width: 168px;
   margin-top: 11px;
@@ -37,72 +37,75 @@ img {
   margin-left: 0px;
 }
 
-.robot{
-    background: #54c3f8;
-    animation: slide-up 2s ease;
+.robot {
+  background: #54c3f8;
+  animation: slide-up 2s ease;
 }
 .user {
-    background: #00D14A;
-    animation: slide-up 1.4s ease;
-    word-break: break-all;
+  background: #00d14a;
+  animation: slide-up 1.4s ease;
+  word-break: break-all;
 }
-.screen::-webkit-scrollbar{
+.screen::-webkit-scrollbar {
   width: 5px;
   height: 5px;
-  
 }
 .screen::-webkit-scrollbar-track-piece {
   background: rgb(194, 194, 194);
 }
 .screen::-webkit-scrollbar-thumb:vertical {
-  background:rgb(121, 121, 121);
-  height:9px;
+  background: rgb(121, 121, 121);
+  height: 9px;
 }
-#keyboard{
-    width: 224px;
-}
-#keyboard-width{
+#keyboard {
   width: 224px;
 }
-#textarea-reply{
+#keyboard-width {
+  width: 224px;
+}
+#textarea-reply {
   resize: none;
 }
-#iterator{
+#iterator {
   margin-bottom: 2px;
 }
 
-.input-reply{
+.input-reply {
   height: 35px;
 }
 
-#typing{
+#typing {
   text-decoration: underline;
   width: 221px;
   margin-left: -4px;
   background-color: #fbfbfb;
   font-style: italic;
 }
-#robot-reply{
+#robot-reply {
   margin-top: 26px;
 }
 
-#btn-submit{
-  background-color:#ff4081 !important;
+#btn-submit {
+  background-color: #ff4081 !important;
 }
 
 @keyframes slide-up {
   0% {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-#response-array{
+#response-array {
   margin-top: 117px;
 }
-#div-mess{
+#div-mess {
   display: inline-flex;
+}
+.woman {
+  background: #f5667f;
+  transition: color 1s;
 }

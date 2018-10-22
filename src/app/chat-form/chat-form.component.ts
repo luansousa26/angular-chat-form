@@ -18,6 +18,8 @@ export class ChatFormComponent implements OnInit {
   typingTimer: any; // control the time that user don't type.
   typingAlert = "User is typing..."; // alert message.
   responseArray: any[] = []; // Array for response
+  isWoman: boolean;
+  photoUser = 'assets/pics/dog.jpeg';
   constructor() {}
 
   ngOnInit() {}
@@ -83,8 +85,14 @@ export class ChatFormComponent implements OnInit {
         return Age.verifyAge(Number.parseInt(value));
       case "country":
         return Countries.verifyCountries(value);
-        case "name":
+      case "name":
         return Names.verifyName(value);
+      case "gender":
+        if (value === "Feminine") {
+          this.isWoman = true;
+          this.photoUser = 'assets/pics/woman.png'
+        }
+        break;
     }
     return null;
   }
