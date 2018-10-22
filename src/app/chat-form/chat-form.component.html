@@ -1,5 +1,5 @@
 <div align="center" id="chat-container">
- <!-- Iphone Image -->
+  <!-- Iphone Image -->
   <div id="phone">
   </div>
   <div id="phone-screen" class="screen">
@@ -55,7 +55,8 @@
       <div *ngIf="(ques.number === 0 || quiz[ques.number - 1].reply !== null) && (ques.type === 'text' && ques.reply === null)"
         id="string">
         <mat-form-field id="keyboard-width">
-          <textarea matInput (keyup.enter)="updateResp(ques,fieldText.value)" #fieldText name="text-area" id="textarea-reply" placeholder="Keyboard"></textarea>
+          <textarea matInput (keyup.enter)="updateResp(ques,fieldText.value)" #fieldText name="text-area" id="textarea-reply"
+            placeholder="Keyboard"></textarea>
         </mat-form-field>
       </div>
 
@@ -63,16 +64,25 @@
       <div *ngIf="(ques.number === 0 || quiz[ques.number - 1].reply !== null) && (ques.type === 'number' && ques.reply === null)"
         id="number">
         <mat-form-field id="keyboard-width">
-          <input matInput (keyup.enter)="updateResp(ques,fieldNumber.value)" #fieldNumber name="text-number" class="input-reply" id="number-reply"
-            type="number" placeholder="Age">
+          <input matInput (keyup.enter)="updateResp(ques,fieldNumber.value)" #fieldNumber name="text-number" class="input-reply"
+            id="number-reply" type="number" placeholder="Age">
         </mat-form-field>
+      </div>
+
+      <!-- sex type question -->
+      <div *ngIf="(ques.number === 0 || quiz[ques.number - 1].reply !== null) && (ques.type === 'gender' && ques.reply === null)"
+        id="gender">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+          <mat-button-toggle #m (click)="updateResp(ques,m.value)" value="Masculine">Masculine</mat-button-toggle>
+          <mat-button-toggle #f (click)="updateResp(ques,f.value)" value="Feminine">Feminine</mat-button-toggle>
+        </mat-button-toggle-group>
       </div>
     </div>
     <!-- Submit form -->
     <div *ngIf="quiz[quiz.length -1].reply !== null">
-        <button mat-flat-button id="btn-submit" (click)="onSubmit()">Send!</button>
-        <button mat-flat-button id="btn-undo" (click)="undoForm()">Undo!</button>
-      </div>
+      <button mat-flat-button id="btn-submit" (click)="onSubmit()">Send!</button>
+      <button mat-flat-button id="btn-undo" (click)="undoForm()">Undo!</button>
+    </div>
   </div>
   <!-- Response array -->
   <div id="response-array" *ngIf="responseArray.length > 0">
