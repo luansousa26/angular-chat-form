@@ -12,7 +12,7 @@ export class Questions {
       type: 'text',
       reply: null,
       formName: 'name',
-      comments: 'Cool name guy, do you like Luan Santana?',
+      comments: null,
       response: 'name',
     },
     {
