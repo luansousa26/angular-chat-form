@@ -13,9 +13,25 @@ export class Name {
       message: "wow your name can mean the sunshine. I really love this name."
     },
     {
-        name: "jean",
-        message: "wow your name can mean the blessed for god."
-      }
+      name: "jean",
+      message: "wow your name can mean the blessed for god."
+    },
+    {
+      name: "nice",
+      message: "wow your name can mean the winner."
+    },
+    {
+      name: "renan",
+      message: "wow your name can mean the mysterious."
+    },
+    {
+        name: "jessica",
+        message: "wow your name can mean the observer."
+      },
+      {
+        name: "lucas",
+        message: "wow your name can mean the brighter."
+      },
   ];
 
   public static verifyName(value: string): string {
