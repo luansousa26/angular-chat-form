@@ -35,6 +35,18 @@ export class Names {
     {
       name: 'dion',
       message: 'wow your name its like Jhon Lenon, are you a fake??? kkkk.'
+    },
+    {
+      name: 'jon',
+      message: 'Are you the truly king of Westeros?'
+    },
+    {
+      name: 'sansa',
+      message: 'Are you the lady of Winterfell?'
+    },
+    {
+      name: 'arya',
+      message: 'That lovely name, Arya Stark is the best!'
     }
   ];
 
