@@ -63,7 +63,7 @@ export class Questions {
       reply: null,
       formName: 'profession',
       comments: 'WOW, you must be a nerd!',
-      response: null,
+      response: 'profession',
     },
     {
       number: 6,
