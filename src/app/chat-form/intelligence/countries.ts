@@ -29,7 +29,9 @@ export class Countries {
       name: "winterfell",
       message: "The lone wolf dies but the pack survives!"
     },
-    { name: "konoha", message: "Jiraya for Hokage!" }
+    { name: "konoha", message: "Jiraya for Hokage!" },
+    { name: "russia", message: "I think that Russia its really cold!" },
+    { name: "asgard", message: "Do you meet Odin" }
   ];
 
   public static verifyCountries(country: string): string {
