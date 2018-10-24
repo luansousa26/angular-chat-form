@@ -72,7 +72,7 @@ export class Questions {
       type: 'text',
       reply: null,
       formName: 'programmingLang',
-      comments: 'I preffer BIRL LANGUAGE rsrsrsrsrsrs!',
+      comments: 'I preffer BIRL LANGUAGE rsrsrsrrsrs!',
       response: null,
     },
     {
