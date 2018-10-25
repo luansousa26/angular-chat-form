@@ -47,6 +47,10 @@ export class Names {
     {
       name: 'arya',
       message: 'That lovely name, Arya Stark is the best!'
+    },
+    {
+      name: 'meliodas',
+      message: 'I love nanatsu no Taizai.'
     }
   ];
 
