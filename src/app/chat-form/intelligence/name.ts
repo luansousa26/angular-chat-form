@@ -35,6 +35,10 @@ export class Names {
     {
       name: 'dion',
       message: 'wow your name its like Jhon Lenon, are you a fake??? kkkk.'
+    },
+    {
+      name: 'meliodas',
+      message: 'I love nanatsu no Taizai.'
     }
   ];
 
