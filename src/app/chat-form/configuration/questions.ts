@@ -62,7 +62,7 @@ export class Questions {
       type: 'text',
       reply: null,
       formName: 'profession',
-      comments: 'WOW, you must be a nerd!',
+      comments: null,
       response: 'profession',
     },
     {
