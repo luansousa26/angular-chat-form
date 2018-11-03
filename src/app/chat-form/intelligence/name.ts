@@ -51,6 +51,18 @@ export class Names {
     {
       name: 'meliodas',
       message: 'I love nanatsu no Taizai.'
+    },
+    {
+      name: 'carlos',
+      message: 'Wow your name means strong.'
+    },
+    {
+      name: 'elizabeth',
+      message: 'blimey please, like queen name.'
+    },
+    {
+      name: 'elizabete',
+      message: 'blimey please, like queen name.'
     }
   ];
 
