@@ -3,7 +3,7 @@ import { EqualityVerification } from './name-equality-verification';
 export class Names {
   public static names = [
     { name: 'luan', message: 'Cool name guy, do you like Luan Santana?' },
-    { name: 'eric', message: 'Wow your name can mean the  lonely king.' },
+    { name: 'eric', message: 'Wow your name can mean the lonely king.' },
     {
       name: 'erik',
       message: 'Wow your name can mean the king that rules forever.'
@@ -63,6 +63,14 @@ export class Names {
     {
       name: 'elizabete',
       message: 'blimey please, like queen name.'
+    },
+    {
+      name: 'akihito',
+      message: 'blimey please, like Japan emperor name.'
+    },
+    {
+      name: 'jair',
+      message: 'President Jair Bolsonaro?'
     }
   ];
 
