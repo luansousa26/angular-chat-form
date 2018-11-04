@@ -8,6 +8,7 @@ export class Professions {
     { name: 'businessman', message: 'What is you actuation area?' },
     { name: 'support analyst', message: 'Cool, you like of callings?' },
   ];
+
   public static verifyProfession(profession: string): string {
     return EqualityVerification.verifyNameEquality(this.professions, profession);
   }
