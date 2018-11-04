@@ -40,15 +40,14 @@ export class ChatFormComponent implements OnInit {
     }
   }
 
-  // Listen when the user press a key.
-
+  // Listen when the user press some key.
   @HostListener('document:keydown', ['$event'])
   public handleKeyboardEvent() {
     clearTimeout(this.typingTimer);
     this.typingAlert = 'User is typing...';
   }
 
-  // Listen when the user press out a key.
+  // Listen when the user press out some key.
 
   @HostListener('document:keyup', ['$event'])
   public handleKeyUp() {
