@@ -33,7 +33,8 @@ export class Countries {
     { name: 'russia', message: 'I think that Russia its really cold!' },
     { name: 'asgard', message: 'Do you meet Odin' },
     { name: 'nicaragua', message: 'Nicarágua its a good place.' },
-    { name: 'germany', message: 'Unity and Justice and Freedom' }
+    { name: 'germany', message: 'Unity and Justice and Freedom' },
+    { name: 'italy', message: 'I really love Pizza!' }
   ];
 
   public static verifyCountries(country: string): string {
