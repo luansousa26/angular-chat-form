@@ -80,8 +80,13 @@
     </div>
     <!-- Submit form -->
     <div *ngIf="quiz[quiz.length -1].reply !== null">
-      <button mat-flat-button id="btn-submit" (click)="onSubmit()"><mat-icon>send</mat-icon>Send!</button>
-      <button mat-flat-button id="btn-undo" (click)="undoForm()">Undo!</button>
+      <button mat-flat-button id="btn-submit" (click)="onSubmit()">
+        <mat-icon>send</mat-icon>Send!
+      </button>
+      <button mat-flat-button id="btn-undo" (click)="undoForm()">
+        <mat-icon>
+          delete_forever</mat-icon>Undo!
+      </button>
     </div>
   </div>
   <!-- Response array -->
