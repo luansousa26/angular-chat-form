@@ -81,7 +81,7 @@ export class Questions {
       question: "You watch Game Of Thrones?",
       type: "text",
       reply: null,
-      formName: "wathGame",
+      formName: "watchGame",
       comments: "I love Sansa Stark!",
       response: null
     }
