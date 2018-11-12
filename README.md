@@ -1,6 +1,6 @@
 # AngularChatForm :iphone:
 
-## Angular Form for get users informations, in working!
+## Angular Form for get users informations, in working! :phone:
 ## Live Preview
 https://luansousa26.github.io/angular-chat-form/
 
