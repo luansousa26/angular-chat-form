@@ -1,3 +1,34 @@
+/* Variables */
+
+$white : #fbfbfb;
+
+
+/*  Id's */
+
+#response-array {
+  margin-top: 117px;
+}
+
+#div-mess {
+  display: inline-flex;
+}
+
+#keyboard {
+  width: 224px;
+}
+
+#keyboard-width {
+  width: 224px;
+}
+
+#textarea-reply {
+  resize: none;
+}
+
+#iterator {
+  margin-bottom: 2px;
+}
+
 #phone {
   background-image: url("../../assets/pics/phone.jpg");
   background-repeat: no-repeat;
@@ -5,8 +36,9 @@
   width: 264px;
   margin-top: 30px;
 }
+
 #phone-screen {
-  background: #fbfbfb;
+  background: $white;
   height: 312px;
   width: 224px;
   margin-left: -4px;
@@ -14,18 +46,42 @@
   max-height: 400px;
   overflow-y: auto;
 }
-img {
-  width: 50px;
-  max-width: 70px;
-  max-height: 70px;
-  border-radius: 50%;
-  cursor: pointer;
+
+#typing {
+  text-decoration: underline;
+  width: 221px;
+  margin-left: -4px;
+  background-color: $white;
+  font-style: italic;
 }
+
+#robot-reply {
+  margin-top: 26px;
+}
+
+#btn-submit {
+  background-color: #ff4081 !important;
+}
+
+
+
+
+/* Classes */
+
+.woman {
+  background: #f5667f;
+  transition: color 1s;
+}
+
+.input-reply {
+  height: 35px;
+}
+
 .message-container {
   display: inline;
 }
 .message {
-  color: white;
+  color: $white;
   cursor: pointer;
   border-radius: 0.4em;
   padding: 4px;
@@ -41,52 +97,36 @@ img {
   background: #54c3f8;
   animation: slide-up 2s ease;
 }
+
 .user {
   background: #00d14a;
   animation: slide-up 1.4s ease;
   word-break: break-all;
 }
+
 .screen::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
+
 .screen::-webkit-scrollbar-track-piece {
   background: rgb(194, 194, 194);
 }
+
 .screen::-webkit-scrollbar-thumb:vertical {
   background: rgb(121, 121, 121);
   height: 9px;
 }
-#keyboard {
-  width: 224px;
-}
-#keyboard-width {
-  width: 224px;
-}
-#textarea-reply {
-  resize: none;
-}
-#iterator {
-  margin-bottom: 2px;
-}
 
-.input-reply {
-  height: 35px;
-}
 
-#typing {
-  text-decoration: underline;
-  width: 221px;
-  margin-left: -4px;
-  background-color: #fbfbfb;
-  font-style: italic;
-}
-#robot-reply {
-  margin-top: 26px;
-}
+/* Others */
 
-#btn-submit {
-  background-color: #ff4081 !important;
+img {
+  width: 50px;
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 @keyframes slide-up {
@@ -98,14 +138,4 @@ img {
     opacity: 1;
     transform: translateY(0);
   }
-}
-#response-array {
-  margin-top: 117px;
-}
-#div-mess {
-  display: inline-flex;
-}
-.woman {
-  background: #f5667f;
-  transition: color 1s;
 }

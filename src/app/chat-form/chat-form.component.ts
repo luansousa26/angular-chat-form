@@ -9,17 +9,19 @@ import { Names } from './intelligence/name';
   styleUrls: ['./chat-form.component.scss']
 })
 export class ChatFormComponent implements OnInit {
+
   /*
   ANGULAR CHAT FORM
-    My Idea for this project is create a cool and dinamic FORM
+    My Idea for this project is create a cool and dynamic FORM
     @Author: Luan Sousa
   */
+
   quiz = Questions.questions; // All questions
   typingTimer: any; // control the time that user don't type.
   typingAlert = 'User is typing...'; // alert message.
   responseArray: any[] = []; // Array for response
-  isWoman: boolean;
-  photoUser = 'assets/pics/dog.jpeg';
+  isWoman: boolean; // verify if is needed change the user picture.
+  photoUser = 'assets/pics/dog.jpeg'; // user picture
   constructor() {}
 
   ngOnInit() {}
@@ -76,9 +78,13 @@ export class ChatFormComponent implements OnInit {
       this.responseArray.push({ [qz.formName]: qz.reply });
     });
   }
+
+  // restart the form
   public undoForm(): void {
     location.reload();
   }
+
+  // verify the answer
   public verifyResponse(response: string, value: any): string {
     switch (response) {
       case 'age':
