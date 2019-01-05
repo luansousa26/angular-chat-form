@@ -1,4 +1,4 @@
-import { Question } from '../models/questions.model';
+import { Question } from "../models/questions.model";
 
 export class Questions {
   /*
@@ -8,82 +8,82 @@ export class Questions {
     {
       number: 0,
       id: 1,
-      question: 'Hello, Whats your name?',
-      type: 'text',
+      question: "Hello I am Luan the Robot, Whats your name?",
+      type: "text",
       reply: null,
-      formName: 'name',
+      formName: "name",
       comments: null,
-      response: 'name',
+      response: "name"
     },
     {
       number: 1,
       id: 2,
-      question: 'How many years do you have?',
-      type: 'number',
+      question: "How many years do you have?",
+      type: "number",
       reply: null,
-      formName: 'age',
+      formName: "age",
       comments: null,
-      response: 'age',
+      response: "age"
     },
     {
       number: 2,
       id: 3,
-      question: 'What is your gender?',
-      type: 'gender',
+      question: "What is your gender?",
+      type: "gender",
       reply: null,
-      formName: 'gender',
+      formName: "gender",
       comments: null,
-      response: 'gender',
+      response: "gender"
     },
     {
       number: 3,
       id: 4,
-      question: 'Where you from?',
-      type: 'text',
+      question: "Where you from?",
+      type: "text",
       reply: null,
-      formName: 'country',
+      formName: "country",
       comments: null,
-      response: 'country',
+      response: "country"
     },
     {
       number: 4,
       id: 5,
-      question: 'Do you like a sanduiche?',
-      type: 'text',
+      question: "Do you like a sanduiche?",
+      type: "text",
       reply: null,
-      formName: 'sanduiche',
-      comments: null,
-      response: null,
+      formName: "sanduiche",
+      comments: "I like Subway sanduiche.",
+      response: null
     },
     {
       number: 5,
       id: 6,
-      question: 'What is your profession?',
-      type: 'text',
+      question: "What is your profession?",
+      type: "text",
       reply: null,
-      formName: 'profession',
-      comments: 'WOW, you must be a nerd!',
-      response: 'profession',
+      formName: "profession",
+      comments: null,
+      response: "profession"
     },
     {
       number: 6,
       id: 7,
-      question: 'What Programming Language do you prefer?',
-      type: 'text',
+      question: "What Programming Language do you prefer?",
+      type: "text",
       reply: null,
-      formName: 'programmingLang',
-      comments: 'I preffer BIRL LANGUAGE rsrsrsrsrsrs!',
-      response: null,
+      formName: "programmingLang",
+      comments: "I preffer BIRL LANGUAGE rsrsrsrr!",
+      response: null
     },
     {
       number: 7,
       id: 8,
-      question: 'You watch Game Of Thrones?',
-      type: 'text',
+      question: "You watch Game Of Thrones?",
+      type: "text",
       reply: null,
-      formName: 'wathGame',
-      comments: 'I love Sansa Stark!',
-      response: null,
+      formName: "watchGame",
+      comments: "I love Sansa Stark!",
+      response: null
     }
   ];
 }

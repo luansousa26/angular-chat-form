@@ -3,6 +3,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { Questions } from './configuration/questions';
 import { Age } from './intelligence/age';
 import { Names } from './intelligence/name';
+import { Professions } from 'src/app/chat-form/intelligence/profession';
 @Component({
   selector: 'app-chat-form',
   templateUrl: './chat-form.component.html',
@@ -24,7 +25,7 @@ export class ChatFormComponent implements OnInit {
   photoUser = 'assets/pics/dog.jpeg'; // user picture
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   public updateResp(question: any, value: any): void {
     // /\S/ verify if the string has characters.
@@ -41,15 +42,14 @@ export class ChatFormComponent implements OnInit {
     }
   }
 
-  // Listen when the user press a key.
-
+  // Listen when the user press some key.
   @HostListener('document:keydown', ['$event'])
   public handleKeyboardEvent() {
     clearTimeout(this.typingTimer);
     this.typingAlert = 'User is typing...';
   }
 
-  // Listen when the user press out a key.
+  // Listen when the user press out some key.
 
   @HostListener('document:keyup', ['$event'])
   public handleKeyUp() {
@@ -99,6 +99,8 @@ export class ChatFormComponent implements OnInit {
           this.photoUser = 'assets/pics/woman.png';
         }
         break;
+      case 'profession':
+        return Professions.verifyProfession(value);
     }
     return null;
   }
